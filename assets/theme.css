@@ -1,0 +1,29 @@
+/* announcement bar */
+.announcement--section {
+  background: var(--color-green-0f);
+  color: var(--color-white);
+}
+
+.announcement-bar {
+  padding: 11px 0;
+  display: flex;
+}
+
+.announcement-bar__message {
+  margin: 0 auto;
+}
+
+.announcement-bar p {
+  margin: 0;
+}
+
+.announcement-bar a {
+  transition: all .3s ease-out;
+  color: var(--color-white);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.announcement-bar a:hover {
+  border-color: var(--color-white);
+}
