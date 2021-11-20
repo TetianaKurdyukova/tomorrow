@@ -7,6 +7,8 @@
 .announcement-bar {
   padding: 11px 0;
   display: flex;
+  font-size: 14px;
+  line-height: 24px;
 }
 
 .announcement-bar__message {
@@ -26,4 +28,14 @@
 
 .announcement-bar a:hover {
   border-color: var(--color-white);
+}
+
+.announcement__sub-text {
+  display: none;
+}
+
+@media screen and (min-width: 990px) {
+  .announcement__sub-text {
+    display: block;
+  }
 }
