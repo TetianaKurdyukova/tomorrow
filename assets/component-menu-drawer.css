@@ -90,6 +90,10 @@ details[open].menu-opening > .menu-drawer__submenu {
   padding: 5.6rem 0;
 }
 
+.menu-drawer__navigation .icon-search {
+  margin-right: 10px;
+}
+
 .menu-drawer__inner-submenu {
   height: 100%;
   overflow-x: hidden;
@@ -112,10 +116,16 @@ details[open].menu-opening > .menu-drawer__submenu {
   margin-bottom: 0.2rem;
 }
 
+.menu-drawer__menu {
+  text-transform: uppercase;
+}
+
 .menu-drawer__menu-item {
-  padding: 1.1rem 3.2rem;
+  padding: 10px 20px;
+  display: block;
   text-decoration: none;
-  font-size: 1.8rem;
+  font-size: 14px;
+  color: var(--color-black-04);
 }
 
 .no-js .menu-drawer__menu-item {
@@ -211,20 +221,14 @@ details[open].menu-opening > .menu-drawer__submenu {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
-  padding: 1.2rem;
-  margin-left: -1.2rem;
-  font-size: 1.4rem;
-  color: rgb(var(--color-foreground));
+  font-size: 14px;
+  line-height: 18px;
 }
 
 .menu-drawer__account .icon-account {
-  height: 2rem;
-  width: 2rem;
-  margin-right: 1rem;
-}
-
-.menu-drawer__account:hover .icon-account {
-  transform: scale(1.07);
+  height: 26px;
+  width: 26px;
+  margin-right: 10px;
 }
 
 .menu-drawer .list-social {
