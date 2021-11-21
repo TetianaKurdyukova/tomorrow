@@ -10,9 +10,17 @@
         "link_text_2": "Start Printing",
         "image_url_2": "#"
       }
+    },
+    "1637514047396a744d": {
+      "type": "dynamic-product-row",
+      "settings": {
+        "title": "Our top selling frames",
+        "collection": "wooden-art"
+      }
     }
   },
   "order": [
-    "16375012386dc94303"
+    "16375012386dc94303",
+    "1637514047396a744d"
   ]
 }

@@ -168,6 +168,10 @@
   margin: 0 0 12px;
 }
 
+.product-row--section .caption-with-letter-spacing {
+  margin: 0 0 5px;
+}
+
 .product-card-info__text {
   font-size: 16px;
   line-height: 19px;

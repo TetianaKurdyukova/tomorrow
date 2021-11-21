@@ -31,6 +31,11 @@
 
   <div class="product-card-info">
     <div class="product-card-information__wrapper">
+      {%- if show_vendor -%}
+        <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
+        <div class="caption-with-letter-spacing light">{{ product_card_product.vendor }}</div>
+      {%- endif -%}
+
       {%- if product_card_product.featured_media -%}
         <h3 class="product-card-info__text">
           <a href="{{ product_card_product.url | default: '#' }}" class="full-unstyled-link">
