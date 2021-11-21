@@ -76,7 +76,7 @@
   max-width: 100%;
   object-fit: cover;
   width: 100%;
-  max-height: 800px;
+  max-height: 289px;
 }
 
 .hero-link {
@@ -118,5 +118,112 @@
     width: 50%;
     max-width: 50%;
     max-height: 800px;
+  }
+
+  .hero-banner img {
+    max-height: 800px;
+  }
+}
+
+/* product row */
+.product-row--section {
+  padding: 41px 0;
+}
+
+.product-row--section .page-width {
+  padding-right: 0;
+}
+
+.product-row--section h2 {
+  margin: 0 0 25px;
+}
+
+.swiper.product-gallery {
+  padding: 0 0 41px;
+  margin: 0 0 65px;
+}
+
+.product-gallery.swiper-horizontal>.swiper-scrollbar {
+  top: auto;
+  height: 4px;
+  right: 32px;
+  left: 0;
+  width: calc(100% - 32px);
+}
+
+.product-row--section .swiper-scrollbar {
+  background: rgba(137, 124, 81, .2);
+}
+
+.product-row--section .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: var(--color-brown-89);
+  height: 4px;
+}
+
+.product-row--section .media--square {
+  padding-bottom: 137%;
+}
+
+.product-row--section .card--product {
+  margin: 0 0 12px;
+}
+
+.product-card-info__text {
+  font-size: 16px;
+  line-height: 19px;
+  margin: 0 0 4px;
+  font-family: 'Akzidenz-Grotesk BQ', Arial, Helvetica, sans-serif;
+}
+
+.product-card-info__text a {
+  transition: all .3s ease-out;
+  color: var(--color-black-04);
+  border-bottom: 1px solid transparent;
+  display: inline-block;
+}
+
+.product-card-info__text a:hover {
+  border-color: var(--color-black-04);
+}
+
+.product-card-information__wrapper .price {
+  font-size: 16px;
+  line-height: 19px;
+  font-family: 'Akzidenz-Grotesk BQ', Arial, Helvetica, sans-serif;
+  letter-spacing: 0;
+  color: var(--color-gray-52);
+}
+
+@media screen and (min-width: 750px) {
+  .product-row--section {
+    padding: 61px 0;
+  }
+
+  .product-row--section h2 {
+    margin: 0 0 19px;
+  }
+
+  .product-row--section .media--square {
+    padding-bottom: 134%;
+  }
+
+  .product-row--section .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    height: 6px;
+    top: -1px;
+  }
+
+  .product-gallery.swiper-horizontal>.swiper-scrollbar {
+    right: 64px;
+    width: calc(100% - 64px);
+  }
+
+  .product-card-info__text {
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0 0 8px;
+  }
+
+  .swiper.product-gallery {
+    padding: 0 0 71px;
   }
 }
