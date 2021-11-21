@@ -855,6 +855,32 @@
         "name": "Image banner"
       }
     },
+    "hero-banner": {
+      "name": "Hero banner",
+      "settings": {
+        "image_1": {
+          "label": "First image"
+        },
+        "link_text": {
+          "label": "Link text"
+        },
+        "image_url": {
+          "label": "Link url"
+        },
+        "image_2": {
+          "label": "Second image"
+        },
+        "link_text_2": {
+          "label": "Link text"
+        },
+        "image_url_2": {
+          "label": "Link url"
+        }
+      },
+      "presets": {
+        "name": "Hero banner"
+      }
+    },
     "image-with-text": {
       "name": "Image with text",
       "settings": {
