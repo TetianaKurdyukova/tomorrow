@@ -1,0 +1,233 @@
+/* announcement bar */
+.announcement--section {
+  background: var(--color-green-0f);
+  color: var(--color-white);
+  font-family: 'Akzidenz-Grotesk BQ', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.announcement-bar {
+  padding: 6px 0;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -.1px;
+  text-align: center;
+}
+
+.announcement-bar__message {
+  max-width: 400px;
+  display: inline-block;
+}
+
+.announcement-bar p {
+  margin: 0;
+}
+
+.announcement-bar a {
+  transition: all .3s ease-out;
+  color: var(--color-white);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.announcement-bar a:hover {
+  border-color: var(--color-white);
+}
+
+.announcement__sub-text {
+  display: none;
+}
+
+@media screen and (min-width: 990px) {
+  .announcement-bar {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: .25px;
+    padding: 11px 0;
+    position: relative;
+  }
+
+  .announcement__sub-text {
+    display: block;
+    margin: 0;
+    position: absolute;
+    right: 29px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+/* hero section */
+.hero--section {
+  font-family: var(--font-heading-family);
+  overflow-x: hidden;
+}
+
+.hero-banner {
+  position: relative;
+}
+
+.hero-banner a {
+  display: block;
+}
+
+.hero-banner img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+  max-height: 289px;
+}
+
+.hero-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color-white);
+  font-size: 32px;
+  line-height: 46px;
+  display: flex;
+  align-items: center;
+  max-width: 245px;
+  width: 100%;
+}
+
+.hero-banner a:hover .hero-link {
+  color: var(--color-black-04);
+}
+
+.icon-arrow-right {
+  width: 44px;
+  margin-left: 9px;
+}
+
+.hero-banner a:hover .icon-arrow-right line,
+.hero-banner a:hover .icon-arrow-right path {
+  stroke: var(--color-black-04);
+  fill: var(--color-black-04);
+}
+
+
+@media screen and (min-width: 750px) {
+  .hero--section__flex {
+    display: flex;
+  }
+
+  .hero-banner__image-half {
+    width: 50%;
+    max-width: 50%;
+    max-height: 800px;
+  }
+
+  .hero-banner img {
+    max-height: 800px;
+  }
+}
+
+/* product row */
+.product-row--section {
+  padding: 41px 0;
+}
+
+.product-row--section .page-width {
+  padding-right: 0;
+}
+
+.product-row--section h2 {
+  margin: 0 0 25px;
+}
+
+.swiper.product-gallery {
+  padding: 0 0 41px;
+  margin: 0 0 65px;
+}
+
+.product-gallery.swiper-horizontal>.swiper-scrollbar {
+  top: auto;
+  height: 4px;
+  right: 32px;
+  left: 0;
+  width: calc(100% - 32px);
+}
+
+.product-row--section .swiper-scrollbar {
+  background: rgba(137, 124, 81, .2);
+}
+
+.product-row--section .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: var(--color-brown-89);
+  height: 4px;
+}
+
+.product-row--section .media--square {
+  padding-bottom: 137%;
+}
+
+.product-row--section .card--product {
+  margin: 0 0 12px;
+}
+
+.product-row--section .caption-with-letter-spacing {
+  margin: 0 0 5px;
+}
+
+.product-card-info__text {
+  font-size: 16px;
+  line-height: 19px;
+  margin: 0 0 4px;
+  font-family: 'Akzidenz-Grotesk BQ', Arial, Helvetica, sans-serif;
+}
+
+.product-card-info__text a {
+  transition: all .3s ease-out;
+  color: var(--color-black-04);
+  border-bottom: 1px solid transparent;
+  display: inline-block;
+}
+
+.product-card-info__text a:hover {
+  border-color: var(--color-black-04);
+}
+
+.product-card-information__wrapper .price {
+  font-size: 16px;
+  line-height: 19px;
+  font-family: 'Akzidenz-Grotesk BQ', Arial, Helvetica, sans-serif;
+  letter-spacing: 0;
+  color: var(--color-gray-52);
+}
+
+@media screen and (min-width: 750px) {
+  .product-row--section {
+    padding: 61px 0;
+  }
+
+  .product-row--section h2 {
+    margin: 0 0 19px;
+  }
+
+  .product-row--section .media--square {
+    padding-bottom: 134%;
+  }
+
+  .product-row--section .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    height: 6px;
+    top: -1px;
+  }
+
+  .product-gallery.swiper-horizontal>.swiper-scrollbar {
+    right: 64px;
+    width: calc(100% - 64px);
+  }
+
+  .product-card-info__text {
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0 0 8px;
+  }
+
+  .swiper.product-gallery {
+    padding: 0 0 71px;
+  }
+}

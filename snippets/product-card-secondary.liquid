@@ -1,0 +1,49 @@
+{% comment %}
+  Renders a product card
+
+  Accepts:
+  - product_card_product: {Object} Product Liquid object (optional)
+  - media_size: {String} Size of the product image card. Values are "square" and "portrait". Default is "square" (optional)
+  - show_secondary_image: {Boolean} Show the secondary image on hover. Default: false (optional)
+  - add_image_padding: {Boolean} Enables padding on the image to space out the grid
+  - show_vendor: {Boolean} Show the product vendor. Default: false
+  - show_image_outline: {Boolean} Show card outline. Default: true (optional)
+  - show_rating: {Boolean} Show the product rating. Default: false
+
+  Usage:
+  {% render 'product-card', show_vendor: section.settings.show_vendor %}
+{% endcomment %}
+
+<div class="product-card-wrapper">
+  <div class="card card--product" tabindex="-1">
+    <div class="card__inner">
+        <div class="media media--transparent media--square media--hover-effect">
+          <img
+              srcset="{{ product_card_product.featured_media | img_url: 'master' }}"
+              src="{{ product_card_product.featured_media | img_url: 'master' }}"
+              alt="{{ product_card_product.featured_media.alt | escape }}"
+              loading="lazy"
+              class="motion-reduce"
+          >
+        </div>      
+    </div>
+  </div>
+
+  <div class="product-card-info">
+    <div class="product-card-information__wrapper">
+      {%- if show_vendor -%}
+        <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
+        <div class="caption-with-letter-spacing light">{{ product_card_product.vendor }}</div>
+      {%- endif -%}
+
+      {%- if product_card_product.featured_media -%}
+        <h3 class="product-card-info__text">
+          <a href="{{ product_card_product.url | default: '#' }}" class="full-unstyled-link">
+            {{ product_card_product.title | escape }}
+          </a>
+        </h3>
+      {%- endif -%}
+      {% render 'price', product: product_card_product, price_class: '' %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+{%- for block in section.blocks -%}
+  {%- case block.type -%}
+    {%- when 'announcement' -%}
+      <div class="page-width">
+        <div class="announcement-bar" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }}>
+          {%- if block.settings.text != blank -%}
+              <span class="announcement-bar__message">
+                {{ block.settings.text | escape }}
+              </span>
+            {%- endif -%}
+
+            <div class="announcement__sub-text">
+            {%- if block.settings.link != blank -%}
+              {{ block.settings.link }}
+            {%- endif -%}
+            </div>
+          </div>
+      </div>
+  {%- endcase -%}
+{%- endfor -%}
+
+{% schema %}
+{
+  "name": "t:sections.announcement-bar.name",
+  "class": "announcement--section",
+  "max_blocks": 12,
+  "blocks": [
+    {
+      "type": "announcement",
+      "name": "t:sections.announcement-bar.blocks.announcement.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Free shipping on all orders over $150.",
+          "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+        },
+        {
+          "type": "richtext",
+          "id": "link",
+          "label": "t:sections.announcement-bar.blocks.announcement.settings.link.label"
+        }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      {
+        "type": "announcement"
+      }
+    ]
+  }
+}
+{% endschema %}

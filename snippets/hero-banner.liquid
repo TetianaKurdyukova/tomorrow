@@ -1,0 +1,13 @@
+<a href="{{ image_url }}">
+  <img
+    srcset="{{ image_1 | img_url: 'master' }}"
+    src="{{ image_1 | img_url: 'master' }}"
+    loading="lazy"
+    alt="{{ image_1.alt | escape }}">
+  {% if link_text != blank %}
+    <span class="hero-link">
+      {{ link_text }}
+      {% render 'icon-arrow-right' %}
+    </span>
+  {% endif %}
+</a>

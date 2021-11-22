@@ -1,0 +1,27 @@
+{
+  "sections": {
+    "16375012386dc94303": {
+      "type": "dynamic-hero-banner",
+      "settings": {
+        "image_1": "shopify:\/\/shop_images\/Rectangle_3.jpg",
+        "link_text": "Start Framing",
+        "image_url": "#",
+        "image_2": "shopify:\/\/shop_images\/Image_2b286609-b12c-4561-a88b-a695e21c26ec.jpg",
+        "link_text_2": "Start Printing",
+        "image_url_2": "#"
+      }
+    },
+    "1637514047396a744d": {
+      "type": "dynamic-product-row",
+      "settings": {
+        "title": "Our top selling frames",
+        "collection": "wooden-art",
+        "show_vendor": false
+      }
+    }
+  },
+  "order": [
+    "16375012386dc94303",
+    "1637514047396a744d"
+  ]
+}

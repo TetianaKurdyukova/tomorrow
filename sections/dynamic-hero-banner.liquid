@@ -1,0 +1,61 @@
+<div class="hero--section {% if section.settings.image_1 != blank and section.settings.image_2 != blank %}hero--section__flex{% endif %}">
+  {% if section.settings.image_1 != blank %}
+    <div class="hero-banner {% if section.settings.image_2 != blank %}hero-banner__image-half{% endif %}">
+      {% render 'hero-banner',  image_1: section.settings.image_1,
+                              image_url: section.settings.image_url,
+                              link_text: section.settings.link_text %}
+    </div>  
+  {% endif %}
+  {% if section.settings.image_2 != blank %}
+    <div class="hero-banner {% if section.settings.image_1 != blank %}hero-banner__image-half{% endif %}">
+      {% render 'hero-banner',  image_1: section.settings.image_2,
+                              image_url: section.settings.image_url_2,
+                              link_text: section.settings.link_text_2 %}
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.hero-banner.name",
+  "tag": "section",
+  "class": "spaced-section spaced-section--full-width",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "t:sections.hero-banner.settings.image_1.label"
+    },
+    {
+      "type": "text",
+      "id": "link_text",
+      "label": "t:sections.hero-banner.settings.link_text.label"
+    },
+    {
+      "type": "url",
+      "id": "image_url",
+      "label": "t:sections.hero-banner.settings.image_url.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "t:sections.hero-banner.settings.image_2.label"
+    },
+    {
+      "type": "text",
+      "id": "link_text_2",
+      "label": "t:sections.hero-banner.settings.link_text_2.label"
+    },
+    {
+      "type": "url",
+      "id": "image_url_2",
+      "label": "t:sections.hero-banner.settings.image_url_2.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.hero-banner.presets.name"
+    }
+  ]
+}
+{% endschema %}
