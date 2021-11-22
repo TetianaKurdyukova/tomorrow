@@ -15,7 +15,8 @@
       "type": "dynamic-product-row",
       "settings": {
         "title": "Our top selling frames",
-        "collection": "wooden-art"
+        "collection": "wooden-art",
+        "show_vendor": false
       }
     }
   },
